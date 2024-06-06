@@ -22,8 +22,10 @@
             <li>
                 <%- todo.text %>
 
-                    <form action="/todo/<%= todo._id %>?_method=delete" method="post"></form>
-                    <input type="submit" value="delete todo">
+                    <form action="/todo/<%= todo._id %>?_method=delete" method="post">
+                        <input type="submit" value="delete todo">
+                    </form>
+
             </li>
 
             <% } %>
