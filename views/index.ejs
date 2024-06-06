@@ -5,32 +5,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../static/index.css" type="text/css">
     <title>Basic Todo App</title>
 </head>
 
 <body>
-    <h1>Todos</h1>
+    <header>
+        <h1 class="page-title">Todos</h1>
 
-    <h2> Add Todo</h2>
-    <form action="/todo" method="post">
-        <input type="text" name="text" placeholder="new todo">
-        <input type="submit" value="create new todo">
-    </form>
-    <ul>
-        <% for (todo of todos) { %>
+    </header>
+    <main>
+        <h2> Add TodoBelow </h2>
+        <form action="/todo" method="post" id="add-tasks">
+            <input type="text" name="text" placeholder="New Todo Here" class="new-todo-input">
+            <input class="submit-button" type="submit" value="Create Todo">
+        </form>
+        <ul>
+            <% for (todo of todos) { %>
+                <span>
+                    <li class="task-li">
 
-            <li>
-                <%- todo.text %>
+                        <input class="list-item-input" value="<%- todo.text %>">
 
-                    <form action="/todo/<%= todo._id %>?_method=delete" method="post">
-                        <input type="submit" value="delete todo">
-                    </form>
+                        <form class="task-item" action="/todo/<%= todo._id %>?_method=delete" method="post">
+                            <input class="update-button" type="submit" value="Update">
+                            <input class="delete-button" type="submit" value="Delete">
+                        </form>
 
-            </li>
+                    </li>
+                </span>
 
-            <% } %>
-    </ul>
+
+                <% } %>
+        </ul>
+    </main>
+
+
 
 
 </body>

@@ -55,7 +55,7 @@ app.get('/', async (req, res) => {
     const todos = await Todo.find({})
 
     // Render index.ejs
-    res.render('index.ejs', { todos: todos })
+    res.render('index.ejs', { todos })
 })
 
 app.get('/seed', async (req, res) => {
@@ -73,8 +73,9 @@ app.get('/seed', async (req, res) => {
 app.post('/todo', async (req, res) => {
 
     // Create the new todo
-    await Todo.create(req.body)
+    const todo = await Todo.create(req.body)
     // redirect to main page
+    // res.send(todo)
     res.redirect('/')
 })
 

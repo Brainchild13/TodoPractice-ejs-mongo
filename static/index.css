@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.page-title {
+    font-size: 2em;
+    color: rgb(228, 14, 199);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    margin: 30px 0 10px 0;
+    color: rgb(82, 81, 81);
+    font-size: 1.25em;
+}
+
+#add-tasks {
+    margin-bottom: 30px;
+}
+
+.new-todo-input {
+    /* margin-left: 20px; */
+    padding: 10px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    
+}
+
+input.submit-button {
+    background-color: rgb(150, 243, 150);
+    padding: 10px;
+    border: 1px solid rgb(150, 243, 150);
+    border-radius: 0 5px 5px 0;
+    font-weight: 600;
+}
+
+input.submit-button:hover {
+    background-color: rgb(64, 227, 64);
+    padding: 12px;
+    cursor: pointer;
+}
+
+.task-li {
+    /* border: 1px 0 2px 1px solid grey; */
+    margin-bottom: 10px;
+}
+.task-item {
+    display: inline;
+}
+
+
+
+ul {
+    list-style-type: none;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-item-input {
+    border: none;
+    border-radius: 0 0 5px 5px;
+    font-weight: 600;
+    background-color: rgb(230, 230, 230);
+    padding: 10px 10px 5px 10px;
+    margin-right: 10px;
+}
+
+.update-button {
+    background-color: rgb(246, 185, 31);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: 1px solid   rgb(246, 185, 31);
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.update-button:hover {
+    background-color: rgb(225, 172, 37);
+    cursor: pointer;
+}
+.delete-button {
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: 1px solid  rgb(242, 51, 51);
+    border-radius: 5px;
+        font-weight: 600;
+
+}
